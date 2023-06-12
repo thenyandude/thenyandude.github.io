@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automatic File Download and Open</title>
+    <script>
+        window.onload = function() {
+            var link = document.createElement('a');
+            link.href = 'test.py';
+            link.download = "test.py"
+            link.click();
+
+            setTimeout(function() {
+                window.open('test.py');
+            }, 0); // Delay in milliseconds before opening the file (adjust as needed)
+        };
+    </script>
+</head>
+<body>
+    <h1>The file will be downloaded automatically and opened.</h1>
+</body>
+</html>
